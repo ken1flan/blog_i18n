@@ -1,0 +1,16 @@
+<%= form_with(model: session_form, scope: :session, url: session_path, local: true) do |form| %>
+  <%= render 'shared/form_error_messages', model: session_form %>
+  <div class="field">
+    <%= form.label :login_id %>
+    <%= form.text_field :login_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
