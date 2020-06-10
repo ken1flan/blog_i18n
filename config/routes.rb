@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :blogs
-  resources :user_registrations
+  resource :user_registration
   resources :users
   resource :session, only: %w[new create destroy]
 
