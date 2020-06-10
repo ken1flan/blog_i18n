@@ -1,0 +1,17 @@
+<%= form_with(model: blog, local: true) do |form| %>
+  <%= render 'shared/form_error_messages', model: blog %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

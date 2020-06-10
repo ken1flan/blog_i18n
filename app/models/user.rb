@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :blogs
+
   has_secure_password
 
   validates :login_id, presence: true, length: { minimum: 5, maximum: 32 }, uniqueness: true
