@@ -12,6 +12,6 @@ class UserRegistrationsController < ApplicationController
   private
 
     def user_registration_params
-      params.require(:user_registration).permit(:email, :token, :user_id, :expired_at)
+      params.require(:user_registration).permit(:email)
     end
 end
