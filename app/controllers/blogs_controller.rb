@@ -1,6 +1,5 @@
 class BlogsController < ApplicationController
   before_action :require_login, only: [:new, :create, :edit, :update, :destroy]
-  before_action :set_blog, only: [:show]
   before_action :set_current_user_blog, only: [:edit, :update, :destroy]
 
   # GET /blogs
