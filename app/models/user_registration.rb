@@ -2,6 +2,8 @@ class UserRegistration < ApplicationRecord
   belongs_to :user, optional: true
   before_create :set_token, :set_expired_at
 
+  validates :email, presence: true, length: { maximum: 255 }, email_format: true
+
   EXPIRATION_PERIOD = 24.hours
 
   private
