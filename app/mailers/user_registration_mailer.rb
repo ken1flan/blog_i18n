@@ -1,0 +1,2 @@
+class UserRegistrationMailer < ApplicationMailer
+end
