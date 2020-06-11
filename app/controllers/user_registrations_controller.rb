@@ -6,7 +6,12 @@ class UserRegistrationsController < ApplicationController
   def create
     @user_registration = UserRegistration.new(user_registration_params)
 
-    format.html { render :new } unless @user_registration.save
+    if @user_registration.save
+      UserRegistrationMailer.with(user_registration: @user_registration).welcome_email.deliver_later
+      redirect_to root_path, flash: { success: 'You will receive an email within a few minutes, so please complete user registration.' }
+    else
+      render :new
+    end
   end
 
   private
