@@ -1,9 +1,13 @@
 class UserRegistrationsController < ApplicationController
   def new
+    redirect_to(root_path, flash: { alert: 'already login.' }) and return if login?
+
     @user_registration = UserRegistration.new
   end
 
   def create
+    redirect_to(root_path, flash: { alert: 'already login.' }) and return if login?
+
     @user_registration = UserRegistration.new(user_registration_params)
 
     if @user_registration.save
