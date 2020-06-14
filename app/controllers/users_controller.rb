@@ -14,7 +14,9 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
-    @user = User.new
+    redirect_to(new_user_registration_path, flash: { alert: 'toke is invalid.' }) and return if user_registration.blank?
+
+    @user = User.new(email: user_registration.email)
   end
 
   # GET /users/1/edit
@@ -24,6 +26,8 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+    redirect_to(new_user_registration_path, flash: { alert: 'toke is invalid.' }) and return if user_registration.blank?
+
     @user = User.new(user_params)
 
     respond_to do |format|
@@ -69,6 +73,12 @@ class UsersController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def user_params
-      params.require(:user).permit(:login_id, :password, :name, :email, :phone, :introduction)
+      params
+      .require(:user).permit(:login_id, :password, :name, :phone, :introduction)
+      .merge(email: user_registration.email)
+    end
+
+    def user_registration
+      UserRegistration.unused.within_time_limit.find_by(token: params[:token])
     end
 end
