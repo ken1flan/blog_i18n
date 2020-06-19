@@ -1,3 +1,6 @@
+<section>
+  <%= link_to 'Sample Application', root_path %>
+</section>
 <section style='text-align: right;'>
   <% if !!current_user %>
     <%= current_user.name %>
@@ -5,5 +8,12 @@
     <%= link_to 'Log out', session_path, method: :delete %>
   <% else %>
     <%= link_to 'Log in', new_session_path %>
+    |
+    <%= link_to 'Sign up', new_user_registration_path %>
   <% end %>
+</section>
+<section>
+  <%= link_to 'Blogs', blogs_path %>
+  |
+  <%= link_to 'Users', users_path %>
 </section>
