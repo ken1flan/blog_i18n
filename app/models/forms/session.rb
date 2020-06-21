@@ -20,7 +20,8 @@ module Forms
     end
 
     def password_cannot_authenticate
-      errors.add(:password, 'login_id or password is wrong') if user.blank? || user.authenticate(password)
+      return if login_id.blank? || password.blank?
+      errors.add(:base, :login_id_or_password_is_wrong) if user.blank? || user.authenticate(password)
     end
   end
 end
