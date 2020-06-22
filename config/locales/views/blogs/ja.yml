@@ -1,0 +1,10 @@
+ja:
+  blogs:
+    index:
+      title: ブログの一覧
+      description: ユーザの経験、意見がまとまっています。ご一読ください！
+    new:
+      title: ブログの作成
+    edit:
+      title: ブログの編集
+
