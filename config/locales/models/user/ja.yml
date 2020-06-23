@@ -10,8 +10,8 @@ ja:
         email: メールアドレス
         phone: 電話番号
         introduction: 自己紹介
-        created_at: 作成日
-        updated_at: 作成日
+        created_at: 作成日時
+        updated_at: 更新日時
   helpers:
     placeholder:
       user:
