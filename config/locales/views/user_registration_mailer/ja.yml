@@ -1,0 +1,7 @@
+ja:
+  user_registration_mailer:
+    welcome_email:
+      body: |
+        ようこそ、サンプルアプリケーションへ！
+
+        下記のURLへ訪れて、ユーザ登録を完了してください。
