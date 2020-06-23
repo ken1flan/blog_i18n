@@ -1,0 +1,5 @@
+ja:
+  sessions:
+    new:
+      title: サインイン
+      description: ログインIDとパスワードを入力してください。
