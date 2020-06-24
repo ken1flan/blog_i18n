@@ -1,19 +1,11 @@
-<p id="notice"><%= notice %></p>
-
+<h1><%= @blog.title %></h1>
 <p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
+  <%= link_to(@blog.user.name, @blog.user) %>
 </p>
 
-<p>
-  <strong>Body:</strong>
+<pre>
   <%= @blog.body %>
-</p>
+</pre>
 
-<p>
-  <strong>User:</strong>
-  <%= @blog.user_id %>
-</p>
-
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
-<%= link_to 'Back', blogs_path %>
+<%= link_to(t('edit'), edit_blog_path(@blog)) if @blog.author?(current_user) %>
+<%= link_to(t('back'), blogs_path) %>

@@ -1,0 +1,14 @@
+ja:
+  activemodel:
+    models:
+      forms/session: セッション
+    attributes:
+      forms/session:
+        login_id: ログインID
+        password: パスワード
+    errors:
+      models:
+        forms/session:
+          attributes:
+            base:
+              login_id_or_password_is_wrong: ログインIDかパスワードが間違っています

@@ -1,0 +1,24 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザ
+    attributes:
+      user:
+        login_id: ログインID
+        password: パスワード
+        name: 名前
+        email: メールアドレス
+        phone: 電話番号
+        introduction: 自己紹介
+        created_at: 作成日時
+        updated_at: 更新日時
+  helpers:
+    placeholder:
+      user:
+        login_id: nekosuki
+        name: 猫好き
+        email: foo@example.com
+        phone: 09012345678
+        introduction: |
+          私は猫が大好きです。
+          よろしくおねがいします。

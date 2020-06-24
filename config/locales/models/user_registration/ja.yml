@@ -1,0 +1,15 @@
+ja:
+  activerecord:
+    models:
+      user_registration: ユーザ
+    attributes:
+      user_registration:
+        user_id: ユーザID
+        email: メールアドレス
+        expired_at: 期限
+        created_at: 作成日時
+        updated_at: 更新日時
+  helpers:
+    placeholder:
+      user_registration:
+        email: foo@example.com

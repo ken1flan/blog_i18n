@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
-    redirect_to(new_user_registration_path, flash: { alert: 'toke is invalid.' }) and return if user_registration.blank?
+    redirect_to(new_user_registration_path, flash: { alert: t('.toke_is_invalid') }) and return if user_registration.blank?
 
     @user = User.new(email: user_registration.email)
   end
@@ -26,13 +26,13 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    redirect_to(new_user_registration_path, flash: { alert: 'toke is invalid.' }) and return if user_registration.blank?
+    redirect_to(new_user_registration_path, flash: { alert: t('.toke_is_invalid') }) and return if user_registration.blank?
 
-    @user = User.new(user_params)
+    @user = User.new(new_user_params)
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.html { redirect_to @user, notice: t('.successfully_created') }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to @user, notice: 'User was successfully updated.' }
+        format.html { redirect_to @user, notice: t('.successfully_updated') }
         format.json { render :show, status: :ok, location: @user }
       else
         format.html { render :edit }
@@ -60,7 +60,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+      format.html { redirect_to users_url, notice: t('.successfully_destroyed') }
       format.json { head :no_content }
     end
   end
@@ -72,10 +72,15 @@ class UsersController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
-    def user_params
+    def new_user_params
       params
       .require(:user).permit(:login_id, :password, :name, :phone, :introduction)
       .merge(email: user_registration.email)
+    end
+
+    def user_params
+      params
+      .require(:user).permit(:login_id, :password, :name, :phone, :introduction, :email)
     end
 
     def user_registration

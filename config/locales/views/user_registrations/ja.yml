@@ -1,0 +1,7 @@
+ja:
+  user_registrations:
+    new:
+      title: ユーザ登録メール作成
+      description: お手数ですが、メールアドレスの存在確認のために先にメールアドレスの登録をしていただいております。
+    already_login: すでにログインしています。
+    complete_user_registration: 数分以内にメールが届くので、ユーザ登録を完了させてください。

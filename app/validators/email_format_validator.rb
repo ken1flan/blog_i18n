@@ -3,6 +3,6 @@ class EmailFormatValidator < ActiveModel::EachValidator
     return if value.blank?
     return if value =~ /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i
 
-    record.errors[attribute] << (options[:message] || 'is invalid email format')
+    record.errors[attribute] << (options[:message] || I18n.t('errors.messages.email_format_validator'))
   end
 end
