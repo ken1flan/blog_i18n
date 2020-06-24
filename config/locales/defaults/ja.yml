@@ -1,0 +1,5 @@
+ja:
+  errors:
+    messages:
+      email_format_validator: は不正なメールアドレスの書式です
+      phone_format_validator: は不正な電話番号の書式です
