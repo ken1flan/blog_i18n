@@ -7,4 +7,6 @@ ja:
       title: ブログの作成
     edit:
       title: ブログの編集
-
+    successfully_created: ブログを作成しました。
+    successfully_updated: ブログを更新しました。
+    successfully_destroyed: ブログを削除しました。

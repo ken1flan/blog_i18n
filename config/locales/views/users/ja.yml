@@ -5,3 +5,7 @@ ja:
       desctiption: ブログを書いている/書こうとしているユーザの一覧です。自己紹介もあるので読んでみてください。
     edit:
       title: ユーザ編集
+    successfully_created: ユーザを作成しました。
+    successfully_updated: ユーザを更新しました。
+    successfully_destroyed: ユーザを削除しました。
+    toke_is_invalid: トークンが不正です。
