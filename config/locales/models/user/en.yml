@@ -1,0 +1,23 @@
+en:
+  activerecord:
+    models:
+      user: User
+    attributes:
+      user:
+        login_id: Login ID
+        password: Password
+        name: Name
+        email: Email
+        phone: Phone
+        introduction: Introduction
+        created_at: Created at
+        updated_at: Updated at
+  helpers:
+    placeholder:
+      user:
+        login_id: nekosuki
+        name: Cat Lover
+        email: foo@example.com
+        phone: 09012345678
+        introduction: |
+          I love cats!!

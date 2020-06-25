@@ -1,0 +1,8 @@
+en:
+  layouts:
+    header:
+      log_in: Login
+      log_out: Logout
+      sign_up: Sign up
+      blogs: Blogs
+      users: Users

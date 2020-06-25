@@ -1,0 +1,5 @@
+en:
+  errors:
+    messages:
+      email_format_validator: is invalid email format
+      phone_format_validator: is invalid phone format

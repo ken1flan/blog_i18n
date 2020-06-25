@@ -3,3 +3,5 @@ ja:
     new:
       title: サインイン
       description: ログインIDとパスワードを入力してください。
+    logged_in: ログインしました。
+    logged_out: ログアウトしました。

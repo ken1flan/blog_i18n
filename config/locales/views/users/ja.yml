@@ -3,6 +3,8 @@ ja:
     index:
       title: ユーザ一覧
       desctiption: ブログを書いている/書こうとしているユーザの一覧です。自己紹介もあるので読んでみてください。
+    new:
+      title: ユーザ作成
     edit:
       title: ユーザ編集
     successfully_created: ユーザを作成しました。

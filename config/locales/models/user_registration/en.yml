@@ -1,0 +1,15 @@
+en:
+  activerecord:
+    models:
+      user_registration: User Registrtion
+    attributes:
+      user_registration:
+        user_id: User ID
+        email: Email
+        expired_at: Expired at
+        created_at: Created at
+        updated_at: Updated at
+  helpers:
+    placeholder:
+      user_registration:
+        email: foo@example.com

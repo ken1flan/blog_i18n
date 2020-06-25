@@ -1,0 +1,7 @@
+en:
+  user_registrations:
+    new:
+      title: Create user registration mail
+      description: To confirm the existence of your e-mail address, you must first register your e-mail address.
+    already_login: Alread login
+    complete_user_registration: You will receive an email within a few minutes, so please complete the user registration.

@@ -1,0 +1,7 @@
+en:
+  sessions:
+    new:
+      title: Sign in
+      description: Please enter login id and password.
+    logged_in: Logged in.
+    logged_out: Logged out.

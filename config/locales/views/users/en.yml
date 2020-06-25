@@ -1,0 +1,14 @@
+en:
+  users:
+    index:
+      title: Listing users
+      desctiption:
+        A list of users who are writing blogs.There is also a self introduction, so please read it.
+    new:
+      title: Creating user
+    edit:
+      title: Editing user
+    successfully_created: User was successfully created.
+    successfully_updated: User was successfully updated.
+    successfully_destroyed: User was successfully destroyed.
+    toke_is_invalid: Token is invalid.

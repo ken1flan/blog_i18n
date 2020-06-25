@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include LocaleSwitchable
+
   helper_method :current_user
 
   def current_user
