@@ -1,6 +1,7 @@
 ja:
   user_registration_mailer:
     welcome_email:
+      subject: ようこそ、サンプルアプリケーションへ！
       body: |
         ようこそ、サンプルアプリケーションへ！
 
