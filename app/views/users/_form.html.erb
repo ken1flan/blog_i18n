@@ -1,16 +1,7 @@
 <%= form_with(model: user, local: true) do |form| %>
-  <%= hidden_field_tag(:token, params[:token]) %>
-  <% if user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+  <%= render 'shared/form_error_messages', model: user %>
 
-      <ul>
-        <% user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <%= hidden_field_tag(:token, params[:token]) %>
 
   <div class="field">
     <%= form.label :login_id %>
