@@ -1,0 +1,34 @@
+en:
+  activerecord:
+    models:
+      blog: Blog
+    attributes:
+      blog:
+        title: Title
+        body: Body
+        user_id: Author
+        status: Status
+        created_at: Created at
+        updated_at: Updated at
+    errors:
+      models:
+        blog:
+          attributes:
+            title:
+              title_must_contain_cat: must contain cat
+  validation:
+    blog:
+      title_must_contain_cat:
+        condition:
+          - Cat
+          - cat
+          - 猫
+          - ねこ
+          - ネコ
+  helpers:
+    placeholder:
+      blog:
+        title: Etsetra related to cats
+        body: |
+          I love cats and I can't help them.
+          Then ...

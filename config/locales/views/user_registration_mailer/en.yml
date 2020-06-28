@@ -1,0 +1,8 @@
+en:
+  user_registration_mailer:
+    welcome_email:
+      subject: Welcome to Sample application!
+      body: |
+        Welcome to Sample application!
+
+        Please visit following url and finished user registration.

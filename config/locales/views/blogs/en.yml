@@ -1,0 +1,12 @@
+en:
+  blogs:
+    index:
+      title: Listing blogs
+      description: User experience and opinions are collected. Please read it!
+    new:
+      title: Create blog
+    edit:
+      title: Edit blog
+    successfully_created: Blog was successfully created.
+    successfully_updated: Blog was successfully updated.
+    successfully_destroyed: Blog was successfully destroyed.

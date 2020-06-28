@@ -1,5 +1,7 @@
 <section>
   <%= link_to(t('application_name'), root_path) %>
+  <% other_locale = (locale == :ja ? :en : :ja) %>
+  (<%= link_to(other_locale.upcase, root_path(lang: other_locale)) %>)
 </section>
 <section style='text-align: right;'>
   <% if !!current_user %>

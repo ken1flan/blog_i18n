@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     reset_session
     @session_form = Forms::Session.new(session_params)
     if @session_form.save
-      redirect_to root_path, flash: { success: 'Logged in.' }
+      redirect_to root_path, flash: { success: t('.logged_in') }
     else
       render :new
     end
@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
 
   def destroy
     reset_session
-    redirect_to root_path, flash: { success: 'Logged out.' }
+    redirect_to root_path, flash: { success: t('.logged_out') }
   end
 
   private
