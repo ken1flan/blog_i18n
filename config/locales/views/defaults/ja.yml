@@ -1,4 +1,7 @@
 ja:
+  date:
+    formats:
+      nengetsu: "%y年%m月"
   application_name: サンプルアプリケーション
   back: 戻る
   new: 新規作成

@@ -9,6 +9,7 @@
   <table>
     <thead>
       <tr>
+        <th></th>
         <th><%= Blog.human_attribute_name(:title) %></th>
         <th><%= Blog.human_attribute_name(:user_id) %></th>
         <th></th>
@@ -18,6 +19,7 @@
     <tbody>
       <% @blogs.each do |blog| %>
         <tr>
+          <td><%= l(blog.created_at.to_date, format: :nengetsu) %></td>
           <td><%= link_to(blog.title, blog) %></td>
           <td><%= link_to(blog.user.name, blog.user) %></td>
           <td>
