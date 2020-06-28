@@ -1,0 +1,11 @@
+en:
+  date:
+    formats:
+      nengetsu: "%m/%y"
+  application_name: Sample Application
+  back: Back
+  new: New
+  show: Detail
+  edit: Edit
+  destroy: Delete
+  are_you_sure?: Are you sure?
